@@ -1,0 +1,16 @@
+1. Create a Virtual Environment
+ python -m venv django_env
+2. Activate the Virtual Environment
+ django_env\Scripts\activate.bat
+3. Install Django
+ pip install django
+4. Check Django Version
+ django-admin --version
+5. Create a New Django Project
+ django-admin startproject mysite
+6. Navigate to the Project Folder
+ cd mysite
+7. Run the Django Development Server
+ python manage.py runserver
+8. Open Your Browser and Test
+ Go to: http://127.0.0.1:8000/
