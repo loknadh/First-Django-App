@@ -1,5 +1,5 @@
 1. Create a Virtual Environment
- python -m venv django_env
+ python -m venv django_env   // For insatlling //
 2. Activate the Virtual Environment
  django_env\Scripts\activate.bat
 3. Install Django
@@ -7,10 +7,48 @@
 4. Check Django Version
  django-admin --version
 5. Create a New Django Project
- django-admin startproject mysite
+ django-admin   // To check other useful commands or repo's related to Django  
+ startproject mysite  // I created project called mysite //
 6. Navigate to the Project Folder
- cd mysite
+ cd mysite  // to run and test my project use CMD and run this //
 7. Run the Django Development Server
  python manage.py runserver
 8. Open Your Browser and Test
  Go to: http://127.0.0.1:8000/
+
+
+Output> from my python Terminal
+PS C:\Users\lokna> dir
+    Directory: C:\Users\lokna
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        07-12-2024     22:02                .vscode
+d-----        20-04-2025     05:03                django_env
+d-r---        27-04-2025     22:22                Documents
+d-r---        27-04-2025     20:56                Downloads
+d-r---        14-02-2025     21:56                Favorites
+d-----        20-04-2025     05:34                mysite
+-a----        01-01-2025     23:59           1254 arubav1.py
+
+
+PS C:\Users\lokna> cd mysite
+PS C:\Users\lokna\mysite> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 27, 2025 - 23:35:33
+Django version 5.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[27/Apr/2025 23:35:42] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[27/Apr/2025 23:35:42] "GET /favicon.ico HTTP/1.1" 404 2208
