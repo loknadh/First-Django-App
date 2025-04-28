@@ -1,0 +1,46 @@
+What is a Django App?
+A Django app is a modular component of a Django project. It typically handles a single feature or section of a website — like blog, login, or products. 
+You can have multiple apps in a single Django project.
+
+How to Create Your First App in Django
+
+1. Activate your virtual environment
+ django_env\Scripts\activate
+2. Make Sure You’re in the Project Directory
+ cd mysite
+3. Create a New App
+ python manage.py startapp blog
+4. Add the App to settings.py
+ Open mysite/settings.py and add 'blog', to the INSTALLED_APPS list:
+ INSTALLED_APPS = [
+         ...
+         'blog',
+  ]
+5. Create a View Function // my local PC : C:\Users\lokna\mysite\blog\migrations
+ In blog/views.py, add the following:
+ 
+ from django.http import HttpResponse
+ def home(request):
+  return HttpResponse("Hello, Django Blog!")
+6. Create a URLconf for the App in the folder :- C:\Users\lokna\mysite\blog
+ Create a file named urls.py inside the blog folder and add:
+ from django.urls import path
+ from . import views
+
+ urlpatterns = [
+  path('', views.home, name='blog-home'),
+ ]
+7. Include App URLs in the Project’s urls.py
+ Open mysite/urls.py and update it like this:
+ from django.contrib import admin
+ from django.urls import path, include
+
+ urlpatterns = [
+  path('admin/', admin.site.urls),
+  path('', include('blog.urls')),
+ ]
+
+8. Run the Development Server
+ python manage.py runserver
+9. Open Your Browser and Test
+ Go to: http://127.0.0.1:8000/
